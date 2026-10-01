@@ -29,7 +29,7 @@ The analysis focuses on three business questions:
 
 ## AWS Data Pipeline
 
-<!-- AWS pipeline architecture image will be added here. -->
+![AWS Data Pipeline](images/AWS_data_pipeline.png)
 
 The project follows a **raw → transform → catalog → analyze → visualize** architecture.
 
@@ -83,7 +83,7 @@ stops
 packages
 ```
 
-<!-- Data schema image will be added here. -->
+![Amazon Last-Mile Data Schema](images/project_amazon_last_mile.png)
 
 ## SQL Analysis
 
@@ -104,7 +104,7 @@ The business analysis is organized around the three project objectives:
 
 ## Key Insights
 
-<!-- Key insights summary image will be added here. -->
+![Amazon Last-Mile Key Insights](images/insight_amazon_last_mile.png)
 
 ### Route Quality
 
