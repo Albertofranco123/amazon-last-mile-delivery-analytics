@@ -43,25 +43,6 @@ The project follows a **raw → transform → catalog → analyze → visualize*
 | Analysis | Amazon Athena | Performs SQL-based data quality checks, exploratory analysis, and business analytics. |
 | Visualization | Amazon QuickSight | Presents KPIs, visualizations, and operational insights in an interactive dashboard. |
 
-### Pipeline Flow
-
-```text
-AWS Open Data
-      ↓
-Amazon S3 — Raw JSON
-      ↓
-AWS Glue ETL — Parse + Flatten + Transform
-      ↓
-Amazon S3 — Processed Parquet
-      ↓
-AWS Glue Crawler
-      ↓
-AWS Glue Data Catalog — routes | stops | packages
-      ↓
-Amazon Athena — SQL / EDA / Business Analytics
-      ↓
-Amazon QuickSight — Dashboard / KPIs / Insights
-```
 
 ## Data Schema
 
