@@ -1,6 +1,6 @@
 # AWS Amazon Last-Mile Analytics
 
-**End-to-end AWS data analytics project transforming Amazon last-mile delivery data into operational insights using Amazon S3, AWS Glue, Amazon Athena, SQL, and Amazon QuickSight.**
+**End-to-end AWS data analytics project transforming Amazon last-mile delivery data into operational insights using Amazon S3, AWS Glue, Amazon Athena, and SQL.**
 
 ## Project Overview
 
@@ -8,7 +8,7 @@ This project demonstrates the end-to-end development of a cloud-based data analy
 
 Using the Amazon Last-Mile Routing Research Challenge dataset from AWS Open Data, the project transforms nested JSON delivery data into structured, analytics-ready datasets for evaluating route quality, delivery success, and vehicle capacity utilization.
 
-The solution integrates Amazon S3, AWS Glue ETL, AWS Glue Crawler and Data Catalog, Amazon Athena, and Amazon QuickSight to create a complete workflow from raw data ingestion and transformation to SQL analysis and dashboard visualization.
+The solution integrates Amazon S3, AWS Glue ETL, AWS Glue Crawler and Data Catalog, and Amazon Athena to create a complete workflow from raw data ingestion and transformation to SQL-based exploratory and business analysis.
 
 The project analyzes more than **1.45 million packages**, **904,000 stops**, and **6,112 delivery routes**.
 
@@ -29,9 +29,7 @@ The analysis focuses on three business questions:
 
 ## AWS Data Pipeline
 
-![AWS Data Pipeline](images/AWS_data_pipeline.png)
-
-The project follows a **raw → transform → catalog → analyze → visualize** architecture.
+The project follows a **raw → transform → catalog → analyze** architecture.
 
 | Stage | AWS Service | Purpose |
 | --- | --- | --- |
@@ -41,8 +39,6 @@ The project follows a **raw → transform → catalog → analyze → visualize*
 | Processed Storage | Amazon S3 | Stores analytics-ready routes, stops, and packages datasets in Parquet format. |
 | Cataloging | AWS Glue Crawler & Data Catalog | Discovers the processed schemas and registers tables for querying. |
 | Analysis | Amazon Athena | Performs SQL-based data quality checks, exploratory analysis, and business analytics. |
-| Visualization | Amazon QuickSight | Presents KPIs, visualizations, and operational insights in an interactive dashboard. |
-
 
 ## Data Schema
 
@@ -53,7 +49,6 @@ AWS Glue transformed the nested source data into three primary analytical tables
 - **packages** — one record per package within a route and stop
 
 The main relationships are:
-
 
 ![Amazon Last-Mile Data Schema](images/project_amazon_last_mile.png)
 
@@ -108,22 +103,6 @@ The middle 50% of routes ranged from approximately **63.06% to 85.59% estimated 
 
 > Capacity utilization is an estimate based on summed package dimensions relative to executor vehicle volumetric capacity. It should not be interpreted as physical loading efficiency or proof of vehicle overloading.
 
-## Amazon QuickSight Dashboard
-
-The final stage of the project uses Amazon QuickSight to translate the SQL analysis into an interactive operational dashboard.
-
-The dashboard is designed to highlight:
-
-- Total Routes
-- Total Packages
-- Overall Non-Delivery Rate
-- Estimated Average Vehicle Capacity Utilization
-- Route Quality Distribution
-- Non-Delivery Rate by Station
-- Vehicle Capacity Utilization Distribution
-
-<!-- QuickSight dashboard image will be added here. -->
-
 ## Technologies
 
 ### Cloud & Data Engineering
@@ -140,11 +119,6 @@ The dashboard is designed to highlight:
 - Exploratory Data Analysis
 - Data Quality Validation
 - KPI Analysis
-
-### Business Intelligence
-- Amazon QuickSight
-- Dashboard Development
-- Data Visualization
 
 ## Author
 
