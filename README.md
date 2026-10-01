@@ -54,15 +54,6 @@ AWS Glue transformed the nested source data into three primary analytical tables
 
 The main relationships are:
 
-```text
-routes
-  │ route_id
-  ▼
-stops
-  │ route_id + stop_id
-  ▼
-packages
-```
 
 ![Amazon Last-Mile Data Schema](images/project_amazon_last_mile.png)
 
@@ -158,11 +149,5 @@ The dashboard is designed to highlight:
 ## Author
 
 **Alberto Franco**
-
-B.S. Business Administration — Information Systems  
-Minor in Finance  
-San Diego State University
-
-Focused on Data Analytics, Business Intelligence, Business Analysis, and Supply Chain & Operations Analytics.
 
 [GitHub Profile](https://github.com/Albertofranco123)
